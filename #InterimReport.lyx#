@@ -1,0 +1,1398 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{titlesec}
+\setcounter{secnumdepth}{5}
+\usepackage{enumitem}
+\setitemize{nolistsep}
+\newcommand{\planlist}{\setitemize{nolistsep}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+HuddleLamp - Interim Report
+\end_layout
+
+\begin_layout Author
+Jose Kalladanthyil
+\end_layout
+
+\begin_layout Standard
+Date
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Quote
+“Science fiction writers foresee the inevitable, and although problems and
+ catastrophes may be inevitable, solutions are not.” (Isaac Asimov) 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+For an idea to be envisioned and come to fruition someone has to dream it
+ first.
+ people that dream the biggest and challenge the boundaries of our imagination
+ are science fiction writers and movie makers.
+ Various technology advances and human feats were shown, or animated in
+ the movies were then made into reality by various companies.
+ i.e smartwatches were a popular gadget for various detective movies especially
+ James Bond Movies.
+ Smartphones was also popular in movies like matrix, and james bond movies.
+ Another gadget that was very popular in a lot of mainstream movies was
+ an interactive table, like the one in Star Trek.
+ Where a lot of people can collaborate and contribute sitting around a table.
+ Even though the idea was exciting and intrigued a lot of people, this has
+ not been as popular as the other gadgets because of the high production
+ cost which lead to even higher retail price of this product.
+\end_layout
+
+\begin_layout Standard
+HuddleLamp is a project to compete with the fact that interactive tables
+ are quite expensive, making it is inaccessible for some everyday consumers
+ such as schools, public libraries, community centres etc.
+ HuddleLamp aim to use the multitude of tablets and smartphones that people
+ have lying around unused and create an ad-hoc interactive table by using
+ a novel sensing and detection method to deduce where the devices are and
+ what they should be shown.
+ 
+\end_layout
+
+\begin_layout Standard
+HuddleLamp proposes to use some of the cheaper off-the-shelf products like
+ a webcam, and a lamp to create a more cheaper interactive table that anyone
+ could use.
+ HuddleLamp proposes to use a hybrid sensing approach that uses RGB and
+ depth data, that can be obtained from sophisticated webcams, which can
+ detect and identify mobile displays on tables and track their positions
+ and orientations[1].
+ The project devised a way that multiple devices can interact with each
+ other in such a way that they all serve as one seamless multi-device user
+ interface.
+ 
+\end_layout
+
+\begin_layout Standard
+Some of the main advantages of HuddleLamp were the face that you seamless,
+ ad-hoc way of adding devices to the UI.
+ Using HuddleLamp, users can add or remove displays and reconfigure them
+ in space without the need of installing any software or attaching markers.
+ the setup and pairing of devices is implicitly done by placing them below
+ the camera.
+ Adding a new device to the “Huddle” is done by opening a URL on the device
+ and making it visible to the camera.
+ The camera also tracks the hand movements of the user, enabling interactions
+ between the devices.
+\end_layout
+
+\begin_layout Standard
+The simplicity in adding a device to the table means users are not constrained
+ by having specific devices or requiring them to download particular apps.
+ This also means collaboration can occur on tables that are cluttered with
+ other objects likes pens and pencils.
+ There are 2 main components thats required for HuddleLamp; a camera, they
+ suggest Creative Senz3D camera, and a desk lamp, both are relatively inexpensiv
+e components compared to an interactive table.
+ However there are some deficiencies in this improvisation to make a interactive
+ table.
+ At the time of writing, the project have not release a public version of
+ their software.
+ The developers version requires you to connect a computer with the webcam
+ which does most of the grunt work in term tracking devices.
+ In this architecture of HuddleLamp, this does all the resource intensive
+ tasks so if its not a really powerful computer, there are lagging experiences
+ by the users.
+ The fact that to set this interactive table up you need to connect a lamp
+ up to a computer means that the whole setup is not very portable.
+ The size of the interactive part of the table is constrained by how high
+ up the camera is, from the surface of the table.
+ The use of camera means users’ arms and hands can sometimes impede the
+ detection and tracking of devices during moving or touching the devices.
+ 
+\end_layout
+
+\begin_layout Standard
+For these reasons, I propose to create an app which can communicate and
+ collaborate with other mobile devices running the same app nearby.
+ I envision using Bluetooth Low energy technology that came to the fore
+ over the recent years and the advancement done by Apple in iBeacon technology,
+ and creating an indoor positioning algorithm around a table.
+\end_layout
+
+\begin_layout Standard
+This solution can clearly get rid off the camera used by HuddleLamp to make
+ the whole system much more portable.
+ I want to place 3 iBeacon nodes around the table and use trilateration
+ algorithm.
+ Its similar to algorithms used in movies for tracking people using the
+ phone signals.
+ The web architecture implementation would ensure that all the devices would
+ have a synchronised data showing ensuring collaboration between the devices.
+\end_layout
+
+\begin_layout Standard
+This idea in turn have several challenges that needs to be overcome.
+ The main challenge is the fact that bluetooth technology is not designed
+ exact positioning.
+ Eventhough the idea is theoretically possible and also there exist libraries
+ which helps in this scenario.
+ Advanced, sophisticated algorithms needs to be created which can factor
+ the error that is prone to show up.
+ Bluetooth signal is just a 2.4 GHz radio wave and as such is susceptible
+ to factors like absorption, diffraction, interference and multipath propagation.
+ Therefore to achieve more than 5-6m accuracy using trilateration, you need
+ really advanced noise cancelling algorithms.
+\end_layout
+
+\begin_layout Standard
+Over the course of this project I wish to investigate into the posibility
+ of using BLE technology for accurate positioning.
+ Evaluation using ….
+ benchmarks, and creating my own tests to compare with the HuddleLamp implementa
+tion.
+\end_layout
+
+\begin_layout Standard
+Another big challenge that has to be overcome is the lagging experienced
+ by the users of the HuddleLamp.
+ Some of the main culprits for the lagging in the HuddleLamp project was
+ the processing power of the computer used and the delay of transferring
+ information through the web sockets.Using the power of cloud computing and
+ scalable cloud applications like heroku should ensure that the lagging
+ will stay to a minimum.
+ 
+\end_layout
+
+\begin_layout Standard
+One of the big advantage of the hybrid sensing system employed by HuddleLamp
+ was the ease to track the mobile devices on the table.
+ This is another aspect that I would require to replicate using BLE technology.
+ I have decided to overcome this by using the sensors like accelerometer
+ and compass on the devices and dead-reckoning.
+ Dead reckoning is the process of calculating one's current position by
+ using a previously determined position, or fix, and advancing that position
+ based upon known or estimated speeds over elapsed time and course.
+ [2 - wiki] 
+\end_layout
+
+\begin_layout Section
+Background
+\end_layout
+
+\begin_layout Standard
+There are a lot of very important decisions that needs to be taken before
+ the implementation of the product.
+ there are a wide choice of options for each aspect of product such as positioni
+ng, implementation language, benchmarking.
+ Over the course of this section we will go through some of the similar
+ work done by other research labs.
+ Also go through some of the options that needs to be narrowed down, where
+ we will see the advantage and disadvantage for the choices and then pick
+ the method we will be implementing.
+ 
+\end_layout
+
+\begin_layout Subsection
+Related Work
+\end_layout
+
+\begin_layout Standard
+Interactive table is by no means a new idea.
+ A lot of research has been undertaken to find a simple suitable solution
+ for the problem.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+LightSpace 
+\end_layout
+
+\begin_layout Standard
+One of the companies that does a lot of research into this area is Microsoft.
+ One of their research is into a system called LightSpace.
+ LightSpace is a small room installation designed to explore a variety of
+ interactions and computational strategies related to interactive displays
+ and the space that they inhabit [LightSpace].
+ This was a research that investigated into touch sensitive interactive
+ displays which was built using cameras and projectors to simulate a fully
+ virtual 3D environment.
+ As you can see from FIGURE ____ LightSpace is not a portable design, aimed
+ at turning a whole room into an interactive space.
+ It is a more sophisticated implementation with larger set of use cases.
+ including picking and dropping virtual object.
+ It gives a more augmented reality environment.
+ There are other limitation to LightSpace, like it can only emulate interactive
+ display features on flat, static shapes that are designated beforehand.
+\end_layout
+
+\begin_layout Subsubsection
+Beamatron 
+\end_layout
+
+\begin_layout Standard
+Another research undertaken by Microsoft is Steerable displays [beamatron].
+ It uses a motorized platform to orient a projector to display graphics
+ at any point in the room.
+ It is quite similar to the LightSpace research we discussed previously,
+ however the Beamatron can project graphics in the user’s hand, and follow
+ the user as they move about the room.
+ It uses a depth camera to calculate the live changes in the room such as
+ following a user’s hand.
+ It discuss how we can move 2D graphics using gestures.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Suphace Phone
+\end_layout
+
+\begin_layout Subsubsection
+ConnecTable 
+\end_layout
+
+\begin_layout Standard
+Perhaps the most similar work to our project is ConnecTable
+\end_layout
+
+\begin_layout Subsection
+Radio Frequency Signal
+\end_layout
+
+\begin_layout Standard
+One of the biggest decision that needs to be taken for our implementation
+ is the type of Radio Frequency signal (RF) we are going to use for our
+ positioning.
+ There are quite a few mainstream RF widely used, such as Wifi, Near Field
+ Communication (NFC), Bluetooth, Bluetooth Low Energy (BLE) also known as
+ Bluetooth smart.
+ In this section we are going to look at the advantages and the disadvantages
+ of these RF signals.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Wifi 
+\end_layout
+
+\begin_layout Standard
+WiFi is one of the most used RF signals out there.
+ it is used for computer networking using 2.4 GHz UHF and 5 GHz SHF ISM radio
+ bands.
+ The services provided are also numerous, from consulting web pages to watching
+ on demand video sequences.
+\end_layout
+
+\begin_layout Standard
+One of the biggest advantages of Wifi is the fact that its widely used.
+ Almost all location has wifi now which means the setup cost and maintenance
+ cost of wifi would be cheap.
+ It also has the ability to transfer complicated data between its Access
+ point (AP) and the mobile devices, making it highly adaptable.
+ 
+\end_layout
+
+\begin_layout Standard
+WiFi has been used for indoor positioning before by various research groups.
+ Two positioning techniques have been used for these research called Signal
+ Strength Cartography and Wave propagation.
+\end_layout
+
+\begin_layout Standard
+Signal Strength Cartography is a reference based system where you map the
+ area offline with coordinates and the strength of the wifi signal.
+ Then when you are trying to locate a device use the coordinates and the
+ strength to work out where exactly the device is.
+ There are two main steps for this mapping, an offline mapping step, which
+ could be done either by simulation or manually using measurements, and
+ an online positioning step, which could be done either using a probabilistic
+ method or deterministic method.
+ 
+\end_layout
+
+\begin_layout Standard
+Wave propagation approach is a mathematical attempt at finding the distance
+ between the device and the transmitter by finding a relation between the
+ distance and the signal strength.
+ By using at least 3 AP we can use wave propagation and trilateration to
+ work out the position of the device.
+\end_layout
+
+\begin_layout Standard
+However there are various disadvantages of using WiFi to work out positioning
+ of the devices.
+ there are usually only one AP per location, however we would require more
+ than one, to get more accurate positioning of the devices.
+ WiFi works mainly by sending signals in channels, so having more than one
+ WiFi AP in a location could produce congestion in channels which would
+ create an interference.
+ Wifi also higher power consumption as you can see from FIGURE ____.
+ This is because of the larger range in which Wifi sends out its signal.
+ 
+\end_layout
+
+\begin_layout Standard
+There is hope for using WiFi as the main Radio frequency for our product
+ in the future after the Wifi Standards agency brings out Wifi-aware.
+ Which is a proximity based discovery system.
+ Introduction of this system could mean that you don’t require any extra
+ AP, and the devices could interact with each other without any outside
+ help.
+\end_layout
+
+\begin_layout Subsubsection
+Global Positioning System (GPS)
+\end_layout
+
+\begin_layout Standard
+GPS is one of the most widely used feature in our devices.
+ Over the past few years the use of GPS has increased significantly due
+ to the increasing social network activity.
+ Almost every app that we use through our mobile devices request for GPS
+ access.
+ GPS is a space based navigation system using the satellites.
+ It was initially introduced by the Department of Defence of USA using the
+ 24 satellites already in orbit.
+ 
+\end_layout
+
+\begin_layout Standard
+GPS satellites transmit data continuously which contains their current time
+ and position.
+ A GPS receiver listens to multiple satellites and solves equations to determine
+ the exact position of the receiver and its deviation from true time.
+ At a minimum, four satellites must be in view of the receiver in order
+ to compute four unknown quantities (three position coordinates and clock
+ deviation from satellite time).
+ 
+\end_layout
+
+\begin_layout Standard
+The main advantage of GPS is that its widely available.
+ Almost all devices have a GPS receiver on it.
+ It also has a very large range.
+ However it is not a viable option for us because of the fact that the signal
+ comes from outer space and our devices are usually indoors.
+ GPS like any radio frequency signal is prone to absorption and defraction
+ by the roof and walls in the building.
+ GPS also has a high power consumption.
+ GPS tends to be not very accurate, averaging ~10m which would make it unviable
+ for our use.
+\end_layout
+
+\begin_layout Subsubsection
+Bluetooth
+\end_layout
+
+\begin_layout Standard
+Classic Bluetooth usually known as Bluetooth was the codename for a project
+ by Special Interest Group (SIG), a collaboration between some major companies,
+ like Ericsson, Intel, Nokia.
+ Bluetooth was invented for short range wireless communication with devices.
+ Bluetooth uses radio signals in the 2.4 GHz range to transmit data.
+ This range is globally license free range, therefore there is no extra
+ cost for deployment.
+ Bluetooth is not targeted any specific application, therefore a multitude
+ of applications has used Bluetooth in various different ways from transferring
+ files to streaming songs.
+\end_layout
+
+\begin_layout Standard
+SIG is in charge of the specification of Bluetooth and creating a roadmap
+ for it going forward.
+ To standardise the form of communication through Bluetooth, SIG has defined
+ a set of profiles that needs to be made available by the manufacturer.
+ Devices usually only have a subset of these profiles enabled.
+ Some of these profiles are :
+\end_layout
+
+\begin_layout Itemize
+A2DP Advanced Audio Distribution Profile.
+ Used for Streaming audio.
+ 
+\end_layout
+
+\begin_layout Itemize
+HFP Hands-Free Profile.
+ Used for hands free kit to make calls in cars 
+\end_layout
+
+\begin_layout Itemize
+HID Human Interface Device Profile.
+ Provides support for input devices like keyboards, mice and game controllers.
+\end_layout
+
+\begin_layout Standard
+Bluetooth is aimed at applications that require short range communication
+ typically few meters.
+ The actual range a application make depends on the Bluetooth Class the
+ application has and also external circumstances like absorption, diffraction
+ etc.
+ Bluetooth deices are separated out into 3 different classes with separate
+ transmission power.
+ The full picture is shown in Table _____.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Class
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Max Power Output
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Max Range
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Power Level Control
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100 mW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100 m 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mandatory
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.5 mW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10 m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Optional
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 mW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Optional
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bluetooth Power class
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Due to the different profiles and more than sufficient range and relatively
+ low power consumption, Bluetooth shows considerable potential to be used
+ as our Radio frequency signal for our positioning.
+ However there some aspects of it which makes it difficult for bluetooth
+ to be used.
+ The main problem is the security constraints of bluetooth which requires
+ the devices to go through a pairing process with each other.
+\end_layout
+
+\begin_layout Standard
+In Bluetooth technology a device could take either the master role or the
+ slave role.
+ Before the devices can communicate with each other they have to discover
+ each other and specify which profile they are going to use.
+ Pairing is done by : 
+\end_layout
+
+\begin_layout Enumerate
+Master devices continously broadcast “inquiry messages”
+\end_layout
+
+\begin_layout Enumerate
+These messages will be picked up by nearby devices that are “discoverable”
+ 
+\end_layout
+
+\begin_layout Enumerate
+These devices will respond with a message containing their name, profiles
+ they support and other technical details.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Using these details the master device can establish a connection with the
+ correct profile 
+\end_layout
+
+\begin_layout Subsubsection
+Bluetooth Low Energy (BLE)
+\end_layout
+
+\begin_layout Standard
+BLE is a relatively new technology, which came out in 2010 with the new
+ specification for Classic Bluetooth 4.0.
+ BLE was introduced for devices that are predominantly used for monitoring
+ and control, like sensors values and control commands, where there is no
+ need for large amount of data transfer.
+\end_layout
+
+\begin_layout Paragraph
+Modes
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+One of the biggest improvement introduced for BLE, that is not there for
+ Bluetooth, is the addition of the new mode.
+ This new mode takes away the necessity for pairing to exchange data.
+ In this “broadcast” mode the device can send data in the advertisement
+ channel.
+ There are 4 different modes in BLE : 
+\end_layout
+
+\begin_layout Description
+Central : similar to the Bluetooth master role, can have multiple connections.
+ 
+\end_layout
+
+\begin_layout Description
+Peripheral: a device can only have one active connection with the central
+ mode 
+\end_layout
+
+\begin_layout Description
+Broadcaster : Where you send data in the advertisement chanel
+\end_layout
+
+\begin_layout Description
+Observer: Where you listen to the advertisement chanel
+\end_layout
+
+\begin_layout Paragraph
+Scanning
+\begin_inset Newline linebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Another big improvement BLE has brought is the ablity to discover other
+ devices in two different modes.
+ BLE enabled devices can now passively and actively scan for connectable
+ devices.
+\end_layout
+
+\begin_layout Itemize
+Passive scanning - a central device listens to the advertising channel passively
+ to capture all the packets transmitted by connectable devices 
+\end_layout
+
+\begin_layout Itemize
+Active scanning - a central device listen for advertisement packets and
+ when it receives the packet, it checks whether the sender is connectable
+ through looking at the mode.
+ If it is then a scan request packet is send to gain more information.
+\end_layout
+
+\begin_layout Standard
+Devices may advertise as seldom as once every 10 seconds or as fast as every
+ 20 millisecond.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Range
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similar to the Classic Bluetooth, the range of BLE is determined by the
+ transmitting power and the interference that it might experience.
+ BLE has a transmitting power up +10dBm which gives it a range of 300m theoretic
+ally.
+ However BLE usually use a power of 0dB or less which gives it a range of
+ about 50m[link 9].
+ As you can see from the table ____, even though BLE is meant to have low-energy
+ consumption, it has a bigger range than Classic Bluetooth under maximum
+ power.
+ This mainly due to the smaller packet.
+ 
+\end_layout
+
+\begin_layout Subsection
+Positioning algorithms
+\end_layout
+
+\begin_layout Subsubsection
+Ecolocation
+\end_layout
+
+\begin_layout Standard
+Ecolocation is a RF based location algorithm.
+ It uses the sequence of received signal strength RSS from nearby reference
+ nodes with known locations, to find the location of the unknown node.
+ By ordering the reference nodes by their distance we are able to map different
+ regions of the space to their unique signature.
+\end_layout
+
+\begin_layout Description
+Training
+\begin_inset space ~
+\end_inset
+
+phase During the training phase, we divide the area (the table), where the
+ device is going to be, into segments.
+ We go through these segments and detect the RSS signal from all the reference
+ node and store them to a database.
+ 
+\end_layout
+
+\begin_layout Description
+Online
+\begin_inset space ~
+\end_inset
+
+phase Online phase is when an unknown device in in the area and we want
+ to know its location.
+ The device collects the RSSI information from the reference nodes and compares
+ it to the stored information in the database, to get best match or get
+ geometric median of the K-closest values, to work its location.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Trilateration
+\end_layout
+
+\begin_layout Standard
+Trilateration is one of the oldest and most recognisable method of estimating
+ location of an object.
+ We use a minimum of three reference nodes and the distance between them
+ and the device to work out the position of the device.
+ The reference nodes are used as centers of circles and the distance is
+ used as the radius of those circles.
+ The point of intersection of those three circles is the relative or the
+ actual position of the devices depending on whether the location of the
+ reference nodes are known.
+ In most cases of position systems the reference nodes are beacons or access
+ points.
+ The distance can be measured using RSS or or time of flight (TOF), time
+ taken for the signal to reach the device.
+ These measurements combined with the coordinates of the beacons can form
+ the basis of trilateration.
+\end_layout
+
+\begin_layout Standard
+Signal Based Position
+\end_layout
+
+\begin_layout Standard
+From previous work done for indoor positioning we know that many different
+ signal characteristics could be taken into account to determine the position
+ of the device.
+ Some of these characteristics are:
+\end_layout
+
+\begin_layout Description
+Angle
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+Arrival
+\begin_inset space ~
+\end_inset
+
+(AoA)- Angle of Arrival compares the direction from which the different
+ signals arrive at the devices.
+ Using the received angle, we can determine it direction from whic the signal
+ came from.
+ If we have multiple signal coming to the device, we can find the exact
+ location of the device by looking at where the lines intersect.
+ We need a minimum of two reference points and two angls to work out the
+ correct position.
+ There are many difficulties with the method, the device would need to know
+ its own orientation to work out the correct angle.
+ The sensors that detects the signal needs to be very advance (more advanced
+ than the ones usually found on a device.
+ 
+\end_layout
+
+\begin_layout Description
+Time
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+Arrival
+\begin_inset space ~
+\end_inset
+
+(TOA) - By using the time of arrival of the signal and the time of sending
+ of the signal and the medium in which it travelled through we can work
+ out the distance of the devices from reference nodes.
+ This coupled with a database of known travelling time we can work out where
+ the device is.
+ This would however mean we would have to keep a database of results and
+ wont be very portable.
+\end_layout
+
+\begin_layout Description
+RSSI
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Based - Similar to trilateration, the device can use the Recieved Signal
+ Strength Indicator (RSSI) to work out distance from the reference nodes.
+ Any device with a proper network adapter can work out the RSSI value.
+\end_layout
+
+\begin_layout Subsubsection
+Filter
+\begin_inset space ~
+\end_inset
+
+Methods
+\end_layout
+
+\begin_layout Standard
+Filter based positioning uses mathematical methods to estimate the positioning
+ of the device, using some given observations from the system.
+ The observation can be anything from distance to references, previous estimated
+ position or sensor inputs such as a compass or gyroscope.
+ This technique has been used for many different application.
+ Its very helpful because it allows us to incorporate many other sources
+ of data that we could potentially have for the system.
+ A good example of this is presented in [15], where they use ultrasound
+ as the radio frequency signal and combine it with odometry reading to get
+ a better accuracy for their tracking ability.
+\end_layout
+
+\begin_layout Standard
+A particle filter work by continuously generating thousands of particle
+ at random during runtime.
+ For positioning, these particles represent the location that the device
+ could be.
+ We can calculate the distance to the reference beacons for each particle.
+ By using the observer value from the device we can eliminate and filter
+ out those particles that are unlikely to be the correct location.
+ We then use the remaining particles to calculate an estimate for the position
+ of the device.
+ The filtering is done by assigning weights to all the particle depending
+ on how reasonable the particle values are according to the observed value.
+ Gradually, most of the particles will have negligible weight and therefore
+ would not affect the estimation while some particles with significant weights
+ will remain affecting the estimated value significantly.
+ To avoid this problem we resample the higher weight particles while particles
+ with negligent weights are discarded.
+ During the initial step we uniformly distribute the particles around the
+ map, later particles and discarded or saved depending on the filtering
+ method.
+ Two of the most commonly used filter methods are Kalman Filter and Mote
+ Carlo Filter .
+ 
+\end_layout
+
+\begin_layout Section
+Project Plan
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+planlist
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="3">
+<features rotate="0" tabularvalignment="top">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top" width="30page%">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Date
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Target
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fall Back Milestone
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30- Jan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+Finish Interim Report,
+\end_layout
+
+\begin_layout Itemize
+Finish research into frameworks
+\end_layout
+
+\begin_layout Itemize
+Identify the frameworks to be used
+\end_layout
+
+\begin_layout Itemize
+Learn the frameworks
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17 - Feb
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1- March
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15- April
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30-April
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15- May
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30-May
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15-June
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30-June
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Potential Extentions
+\end_layout
+
+\begin_layout Section
+Evaluation Plan
+\end_layout
+
+\end_body
+\end_document
