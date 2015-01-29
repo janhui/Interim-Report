@@ -343,7 +343,22 @@ ConnecTable
 \end_layout
 
 \begin_layout Standard
-Perhaps the most similar work to our project is ConnecTable
+ConnecTable is one of the earlier concept for interactive table using multiple
+ devices.
+ Its a mobile, context aware information appliance which uses a pen-based
+ interaction.
+ It also has the capability of extending its display area to merge multiple
+ connectables together to form one large display.
+ There are primary mode of interaction with ConnecTable is the pen based
+ method.
+ Sensors are also build onto the ConnecTable, allowing the interpretation
+ of physical actions in the real world, mapped to an action on the table
+ depending on the software used.
+ ConnecTable is a roomware component.
+ Roomware is a concept where lots of multiple objects in a room could interact
+ with each other in a way that they would be able to provide information
+ of what is happening in the room.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -1061,7 +1076,7 @@ planlist
 <lyxtabular version="3" rows="10" columns="3">
 <features rotate="0" tabularvalignment="top">
 <column alignment="center" valignment="top">
-<column alignment="left" valignment="top" width="60page%">
+<column alignment="left" valignment="top" width="30page%">
 <column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
@@ -1114,7 +1129,11 @@ Finish research into frameworks
 \end_layout
 
 \begin_layout Itemize
-Identify the ones to be used
+Identify the frameworks to be used
+\end_layout
+
+\begin_layout Itemize
+Learn the frameworks
 \end_layout
 
 \end_inset
