@@ -85,10 +85,6 @@ Jose Kalladanthyil
 \end_layout
 
 \begin_layout Standard
-Date
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -1063,7 +1059,7 @@ status open
 
 {
 \backslash
-planlist
+planlist 
 \end_layout
 
 \end_inset
@@ -1074,10 +1070,10 @@ planlist
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="3">
-<features rotate="0" tabularvalignment="top">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top" width="13text%">
 <column alignment="left" valignment="top" width="30page%">
-<column alignment="left" valignment="top" width="15theight%">
+<column alignment="left" valignment="top" width="15page%">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -1459,8 +1455,90 @@ status open
 Potential Extentions
 \end_layout
 
+\begin_layout Standard
+There are various extensions I would like to do including:
+\end_layout
+
+\begin_layout Itemize
+Finish the gesture controls
+\end_layout
+
+\begin_layout Itemize
+Make it more of a platform so that people can create a workspace they want
+\end_layout
+
+\begin_layout Itemize
+Have some in app workspaces like blank drawing page, casino games
+\end_layout
+
+\begin_layout Itemize
+Have the ability for the picture app to import pics from library
+\end_layout
+
 \begin_layout Section
 Evaluation Plan
+\end_layout
+
+\begin_layout Standard
+As you can see from the background research, a lot of companies and individuals
+ have done various research into creating an interactive table.
+ A lot of research has also been undertaken in the topic of indoor positioning,
+ especially with Bluetooth and BLE.
+ Therefore there is a lot of information about bluetooth and Trilateration
+ and filtering techniques.
+ I will be undertaking a research in the use of bluetooth for positioning
+ in a smaller area.
+ Where I believe the error in sensing would be much smaller.
+ Basic sensing of Bluetooth signalling augmented with odometry data and
+ filtering techniques would give me positioning information to a quite a
+ good accuracy level.
+ 
+\end_layout
+
+\begin_layout Standard
+There are are severals ways for me to evaluate the research I have done
+ and the accuracy of the techniques I have used.
+ As you can see from the progress plan I aim to gather information about
+ distance measurements through Bluetooth and compare it to real world, physical
+ distance and calculate the error for it.
+ 
+\end_layout
+
+\begin_layout Standard
+Another experiment I would do after that it to work out the error for trilaterat
+ion and dead reckoning and create an app which uses a filtration method
+ like the Monte Carlo localization filter to gain a confidence level of
+ where the device is.
+ I would do this by having a large sheet of paper, which would be divided
+ into a grid and calculating where the device is.
+ All of this data combined should give me an accurate picture of the sensing
+ abilities of a device.
+ This should in turn help me build an app where I can take these error informati
+on into account and create a robust app which should be quite accurate.
+ I am aiming to get as close as possible to the sub-centimetre range that
+ HuddleLamp was able to achieve with their implementation.
+ 
+\end_layout
+
+\begin_layout Standard
+Another evaluation experiment I would like to try is a way to benchmark
+ the loading time.
+ How quickly panning and gesture could be passed back to the app.
+ It is something I would also evaluate by comparing it to the HuddleLamp
+ setup I have in the office.
+ Comparison between the implementation for load times might not be the ideal
+ scenario since the loading of information in HuddleLamp is subject to the
+ computer in which the Visual Studio project is running.
+ Different computers can give different result for this experiment.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally I would also have an evaluation where I would give some users an
+ opportunity to use the app and see how they do.
+ Then I would try and do get a questionaire filled to get their feedback.
+ I would try and get a wider variety of views including from graphic designers,
+ students, lecturers etc.
 \end_layout
 
 \end_body
