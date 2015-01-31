@@ -120,40 +120,92 @@ Introduction
 \paragraph_spacing single
 For an idea to be envisioned and come to fruition someone has to dream it
  first.
- people that dream the biggest and challenge the boundaries of our imagination
- are science fiction writers and movie makers.
+ People that dream the biggest and challenge the boundaries of our imagination
+ are science fiction writers and moviemakers.
  Various technology advances and human feats were shown, or animated in
  the movies were then made into reality by various companies.
- i.e smartwatches were a popular gadget for various detective movies especially
+ I.e.
+ smart watches were a popular gadget for various detective movies especially
  James Bond Movies.
- Smartphones was also popular in movies like matrix, and james bond movies.
+ Smartphones was also popular in movies like matrix, and James bond movies.
  Another gadget that was very popular in a lot of mainstream movies was
  an interactive table, like the one in Star Trek.
  Where a lot of people can collaborate and contribute sitting around a table.
  Even though the idea was exciting and intrigued a lot of people, this has
  not been as popular as the other gadgets because of the high production
  cost which lead to even higher retail price of this product.
-\end_layout
-
-\begin_layout Standard
-HuddleLamp is a project to compete with the fact that interactive tables
- are quite expensive, making it is inaccessible for some everyday consumers
- such as schools, public libraries, community centres etc.
- HuddleLamp aim to use the multitude of tablets and smartphones that people
- have lying around unused and create an ad-hoc interactive table by using
- a novel sensing and detection method to deduce where the devices are and
- what they should be shown.
  
 \end_layout
 
 \begin_layout Standard
+HuddleLamp 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HuddleLamp"
+
+\end_inset
+
+ is a project to compete with the fact that interactive tables are quite
+ expensive; making it is inaccessible for some everyday consumers such as
+ schools, public libraries, community centers etc.
+ HuddleLamp aim to use the multitude of unused tablets and smartphones,
+ which people have lying around and create an ad-hoc interactive table by
+ using a novel sensing and detection method to deduce where the devices
+ are and what they should be shown.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/josekalladanthyil/Downloads/HuddleLamp_Setting.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+HuddleLamp Configuration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 HuddleLamp proposes to use some of the cheaper off-the-shelf products like
- a webcam, and a lamp to create a more cheaper interactive table that anyone
+ a webcam, and a lamp to create a cheaper interactive table that anyone
  could use.
  HuddleLamp proposes to use a hybrid sensing approach that uses RGB and
  depth data, that can be obtained from sophisticated webcams, which can
  detect and identify mobile displays on tables and track their positions
- and orientations[1].
+ and orientations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HuddleLamp"
+
+\end_inset
+
+.
  The project devised a way that multiple devices can interact with each
  other in such a way that they all serve as one seamless multi-device user
  interface.
@@ -165,12 +217,13 @@ Some of the main advantages of HuddleLamp were the face that you seamless,
  ad-hoc way of adding devices to the UI.
  Using HuddleLamp, users can add or remove displays and reconfigure them
  in space without the need of installing any software or attaching markers.
- the setup and pairing of devices is implicitly done by placing them below
- the camera.
- Adding a new device to the “Huddle” is done by opening a URL on the device
- and making it visible to the camera.
+ Placing them below the camera implicitly does the setup and pairing of
+ devices.
+ Opening a URL on the device and making it visible to the camera adds the
+ new device to the “Huddle”.
  The camera also tracks the hand movements of the user, enabling interactions
  between the devices.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -178,17 +231,21 @@ The simplicity in adding a device to the table means users are not constrained
  by having specific devices or requiring them to download particular apps.
  This also means collaboration can occur on tables that are cluttered with
  other objects likes pens and pencils.
- There are 2 main components thats required for HuddleLamp; a camera, they
+ There are 2 main components that’s required for HuddleLamp; a camera, they
  suggest Creative Senz3D camera, and a desk lamp, both are relatively inexpensiv
 e components compared to an interactive table.
- However there are some deficiencies in this improvisation to make a interactive
+ 
+\end_layout
+
+\begin_layout Standard
+However there are some deficiencies in this improvisation to make an interactive
  table.
- At the time of writing, the project have not release a public version of
+ At the time of writing, the project has not release a public version of
  their software.
- The developers version requires you to connect a computer with the webcam
+ The developer’s version requires you to connect a computer with the webcam,
  which does most of the grunt work in term tracking devices.
  In this architecture of HuddleLamp, this does all the resource intensive
- tasks so if its not a really powerful computer, there are lagging experiences
+ tasks so if it’s not a really powerful computer, there are lagging experiences
  by the users.
  The fact that to set this interactive table up you need to connect a lamp
  up to a computer means that the whole setup is not very portable.
@@ -200,11 +257,18 @@ e components compared to an interactive table.
 \end_layout
 
 \begin_layout Standard
-For these reasons, I propose to create an app which can communicate and
+For these reasons, I propose to create an app, which can communicate and
  collaborate with other mobile devices running the same app nearby.
  I envision using Bluetooth Low energy technology that came to the fore
- over the recent years and the advancement done by Apple in iBeacon technology,
- and creating an indoor positioning algorithm around a table.
+ over the recent years and the advancement done by Apple in iBeacon technology
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Maisto2013"
+
+\end_inset
+
+, and creating an indoor positioning algorithm around a table.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -216,13 +280,14 @@ This solution can clearly get rid off the camera used by HuddleLamp to make
  phone signals.
  The web architecture implementation would ensure that all the devices would
  have a synchronised data showing ensuring collaboration between the devices.
+ 
 \end_layout
 
 \begin_layout Standard
-This idea in turn have several challenges that needs to be overcome.
- The main challenge is the fact that bluetooth technology is not designed
+This idea in turn has several challenges that need to be overcome.
+ The main challenge is the fact that Bluetooth technology is not designed
  exact positioning.
- Eventhough the idea is theoretically possible and also there exist libraries
+ Even though the idea is theoretically possible and also there exist libraries,
  which helps in this scenario.
  Advanced, sophisticated algorithms needs to be created which can factor
  the error that is prone to show up.
@@ -230,37 +295,45 @@ This idea in turn have several challenges that needs to be overcome.
  to factors like absorption, diffraction, interference and multipath propagation.
  Therefore to achieve more than 5-6m accuracy using trilateration, you need
  really advanced noise cancelling algorithms.
+ 
 \end_layout
 
 \begin_layout Standard
-Over the course of this project I wish to investigate into the posibility
+Over the course of this project I wish to investigate into the possibility
  of using BLE technology for accurate positioning.
- Evaluation using ….
- benchmarks, and creating my own tests to compare with the HuddleLamp implementa
-tion.
+ Evaluation will be predominantly through comparison with HuddleLamp, and
+ creating my own tests to compare with the HuddleLamp implementation.
+ 
 \end_layout
 
 \begin_layout Standard
 Another big challenge that has to be overcome is the lagging experienced
  by the users of the HuddleLamp.
- Some of the main culprits for the lagging in the HuddleLamp project was
+ Some of the main culprits for the lagging in the HuddleLamp project were
  the processing power of the computer used and the delay of transferring
- information through the web sockets.Using the power of cloud computing and
- scalable cloud applications like heroku should ensure that the lagging
- will stay to a minimum.
+ information through the web sockets.
+ Using the power of cloud computing and scalable cloud applications like
+ Heroku should ensure that the lagging would stay to a minimum.
  
 \end_layout
 
 \begin_layout Standard
-One of the big advantage of the hybrid sensing system employed by HuddleLamp
+One of the big advantages of the hybrid sensing system employed by HuddleLamp
  was the ease to track the mobile devices on the table.
  This is another aspect that I would require to replicate using BLE technology.
  I have decided to overcome this by using the sensors like accelerometer
- and compass on the devices and dead-reckoning.
+ and compass on the devices and dead reckoning.
  Dead reckoning is the process of calculating one's current position by
  using a previously determined position, or fix, and advancing that position
  based upon known or estimated speeds over elapsed time and course.
- [2 - wiki] 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DeadReckoning"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -270,11 +343,11 @@ Background
 \begin_layout Standard
 There are a lot of very important decisions that needs to be taken before
  the implementation of the product.
- there are a wide choice of options for each aspect of product such as positioni
+ There are a wide choice of options for each aspect of product such as positioni
 ng, implementation language, benchmarking.
  Over the course of this section we will go through some of the similar
  work done by other research labs.
- Also go through some of the options that needs to be narrowed down, where
+ Also go through some of the options that need to be narrowed down, where
  we will see the advantage and disadvantage for the choices and then pick
  the method we will be implementing.
  
@@ -296,21 +369,58 @@ LightSpace
 \end_layout
 
 \begin_layout Standard
-One of the companies that does a lot of research into this area is Microsoft.
- One of their research is into a system called LightSpace.
+One of the companies that do a lot of research into this area is Microsoft.
+ One of their researches is into a system called LightSpace.
  LightSpace is a small room installation designed to explore a variety of
  interactions and computational strategies related to interactive displays
- and the space that they inhabit [LightSpace].
+ and the space that they inhabit 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wilson2010"
+
+\end_inset
+
+.
  This was a research that investigated into touch sensitive interactive
  displays which was built using cameras and projectors to simulate a fully
  virtual 3D environment.
- As you can see from FIGURE ____ LightSpace is not a portable design, aimed
+ As you can see from FIGURE 1 LightSpace is not a portable design, aimed
  at turning a whole room into an interactive space.
  It is a more sophisticated implementation with larger set of use cases.
- including picking and dropping virtual object.
+ Including picking and dropping virtual object.
  It gives a more augmented reality environment.
- There are other limitation to LightSpace, like it can only emulate interactive
+ There are other limitations to LightSpace, like it can only emulate interactive
  display features on flat, static shapes that are designated beforehand.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename LightSpace_configuration.eps
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+LightSpace Configuration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -318,7 +428,14 @@ Beamatron
 \end_layout
 
 \begin_layout Standard
-Another research undertaken by Microsoft is Steerable displays [beamatron].
+Another research undertaken by Microsoft is Steerable displays 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wilson2012"
+
+\end_inset
+
+.
  It uses a motorized platform to orient a projector to display graphics
  at any point in the room.
  It is quite similar to the LightSpace research we discussed previously,
@@ -326,12 +443,44 @@ Another research undertaken by Microsoft is Steerable displays [beamatron].
  the user as they move about the room.
  It uses a depth camera to calculate the live changes in the room such as
  following a user’s hand.
- It discuss how we can move 2D graphics using gestures.
+ It discusses how we can move 2D graphics using gestures.
  
 \end_layout
 
-\begin_layout Subsubsection
-Suphace Phone
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Microsoft_Kinect_AR_Beamatron.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Beamatron Configuratio
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -339,22 +488,35 @@ ConnecTable
 \end_layout
 
 \begin_layout Standard
-ConnecTable is one of the earlier concept for interactive table using multiple
- devices.
- Its a mobile, context aware information appliance which uses a pen-based
+ConnecTable is one of the earlier concepts for interactive table using multiple
+ devices 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tandler2001"
+
+\end_inset
+
+.
+ It’s a mobile, context aware information appliance, which uses a pen-based
  interaction.
  It also has the capability of extending its display area to merge multiple
- connectables together to form one large display.
+ ConnecTable together to form one large display.
  There are primary mode of interaction with ConnecTable is the pen based
  method.
- Sensors are also build onto the ConnecTable, allowing the interpretation
+ Sensors are also building onto the ConnecTable, allowing the interpretation
  of physical actions in the real world, mapped to an action on the table
  depending on the software used.
- ConnecTable is a roomware component.
+ ConnecTable is a Roomware component.
  Roomware is a concept where lots of multiple objects in a room could interact
  with each other in a way that they would be able to provide information
  of what is happening in the room.
- 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Roomaware"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -362,10 +524,10 @@ Radio Frequency Signal
 \end_layout
 
 \begin_layout Standard
-One of the biggest decision that needs to be taken for our implementation
+One of the biggest decisions that need to be taken for our implementation
  is the type of Radio Frequency signal (RF) we are going to use for our
  positioning.
- There are quite a few mainstream RF widely used, such as Wifi, Near Field
+ There are quite a few mainstreams RF widely used, such as Wi-Fi, Near Field
  Communication (NFC), Bluetooth, Bluetooth Low Energy (BLE) also known as
  Bluetooth smart.
  In this section we are going to look at the advantages and the disadvantages
@@ -378,31 +540,29 @@ Wifi
 \end_layout
 
 \begin_layout Standard
-WiFi is one of the most used RF signals out there.
- it is used for computer networking using 2.4 GHz UHF and 5 GHz SHF ISM radio
+Wi-Fi is one of the most used RF signals out there.
+ It is used for computer networking using 2.4 GHz UHF and 5 GHz SHF ISM radio
  bands.
  The services provided are also numerous, from consulting web pages to watching
  on demand video sequences.
+ 
 \end_layout
 
 \begin_layout Standard
-One of the biggest advantages of Wifi is the fact that its widely used.
- Almost all location has wifi now which means the setup cost and maintenance
- cost of wifi would be cheap.
+One of the biggest advantages of Wi-Fi is the fact that it’s widely used.
+ Almost all location has Wi-Fi now, which means the setup cost and maintenance
+ cost of Wi-Fi would be cheap.
  It also has the ability to transfer complicated data between its Access
  point (AP) and the mobile devices, making it highly adaptable.
  
 \end_layout
 
 \begin_layout Standard
-WiFi has been used for indoor positioning before by various research groups.
- Two positioning techniques have been used for these research called Signal
+Wi-Fi has been used for indoor positioning before by various research groups.
+ Two positioning techniques have been used for this research called Signal
  Strength Cartography and Wave propagation.
-\end_layout
-
-\begin_layout Standard
-Signal Strength Cartography is a reference based system where you map the
- area offline with coordinates and the strength of the wifi signal.
+ Signal Strength Cartography is a reference-based system where you map the
+ area offline with coordinates and the strength of the Wi-Fi signal.
  Then when you are trying to locate a device use the coordinates and the
  strength to work out where exactly the device is.
  There are two main steps for this mapping, an offline mapping step, which
@@ -418,28 +578,30 @@ Wave propagation approach is a mathematical attempt at finding the distance
  distance and the signal strength.
  By using at least 3 AP we can use wave propagation and trilateration to
  work out the position of the device.
-\end_layout
-
-\begin_layout Standard
-However there are various disadvantages of using WiFi to work out positioning
- of the devices.
- there are usually only one AP per location, however we would require more
- than one, to get more accurate positioning of the devices.
- WiFi works mainly by sending signals in channels, so having more than one
- WiFi AP in a location could produce congestion in channels which would
- create an interference.
- Wifi also higher power consumption as you can see from FIGURE ____.
- This is because of the larger range in which Wifi sends out its signal.
  
 \end_layout
 
 \begin_layout Standard
-There is hope for using WiFi as the main Radio frequency for our product
- in the future after the Wifi Standards agency brings out Wifi-aware.
- Which is a proximity based discovery system.
+However there are various disadvantages of using Wi-Fi to work out positioning
+ of the devices.
+ There are usually only one AP per location, however we would require more
+ than one, to get more accurate positioning of the devices.
+ Wi-Fi works mainly by sending signals in channels, so having more than
+ one Wi-Fi AP in a location could produce congestion in channels, which
+ would create interference.
+ Wi-Fi also has a higher power consumption.
+ This is because of the larger range in which Wi-Fi sends out its signal.
+ 
+\end_layout
+
+\begin_layout Standard
+There is hope for using Wi-Fi as the main Radio frequency for our product
+ in the future after the Wi-Fi Standards agency brings out Wi-Fi -aware.
+ Which is proximity based discovery system.
  Introduction of this system could mean that you don’t require any extra
  AP, and the devices could interact with each other without any outside
  help.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -447,20 +609,20 @@ Global Positioning System (GPS)
 \end_layout
 
 \begin_layout Standard
-GPS is one of the most widely used feature in our devices.
+GPS is one of the most widely used features in our devices.
  Over the past few years the use of GPS has increased significantly due
  to the increasing social network activity.
- Almost every app that we use through our mobile devices request for GPS
- access.
+ Nowadays almost every app that we use through our mobile devices request
+ for GPS access which shows how much it has come forward.
  GPS is a space based navigation system using the satellites.
- It was initially introduced by the Department of Defence of USA using the
- 24 satellites already in orbit.
+ The Department of Defence of USA, using the 24 satellites already in orbit,
+ initially introduced it.
  
 \end_layout
 
 \begin_layout Standard
-GPS satellites transmit data continuously which contains their current time
- and position.
+GPS satellites transmit data continuously, which contains their current
+ time and position.
  A GPS receiver listens to multiple satellites and solves equations to determine
  the exact position of the receiver and its deviation from true time.
  At a minimum, four satellites must be in view of the receiver in order
@@ -470,16 +632,17 @@ GPS satellites transmit data continuously which contains their current time
 \end_layout
 
 \begin_layout Standard
-The main advantage of GPS is that its widely available.
+The main advantage of GPS is that it’s widely available.
  Almost all devices have a GPS receiver on it.
  It also has a very large range.
  However it is not a viable option for us because of the fact that the signal
  comes from outer space and our devices are usually indoors.
- GPS like any radio frequency signal is prone to absorption and defraction
+ GPS like any radio frequency signal is prone to absorption and diffraction
  by the roof and walls in the building.
- GPS also has a high power consumption.
+ GPS also has high power consumption.
  GPS tends to be not very accurate, averaging ~10m which would make it unviable
  for our use.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -487,16 +650,23 @@ Bluetooth
 \end_layout
 
 \begin_layout Standard
-Classic Bluetooth usually known as Bluetooth was the codename for a project
- by Special Interest Group (SIG), a collaboration between some major companies,
- like Ericsson, Intel, Nokia.
- Bluetooth was invented for short range wireless communication with devices.
+Classic Bluetooth, usually known as Bluetooth, was the codename for a project
+ by Special Interest Group (SIG), collaboration between some major companies,
+ like Ericsson, Intel, and Nokia.
+ Bluetooth was invented for short-range wireless communication with devices.
  Bluetooth uses radio signals in the 2.4 GHz range to transmit data.
- This range is globally license free range, therefore there is no extra
+ This range is globally license free range; therefore there is no extra
  cost for deployment.
  Bluetooth is not targeted any specific application, therefore a multitude
  of applications has used Bluetooth in various different ways from transferring
  files to streaming songs.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ChalmersBLE"
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
@@ -505,7 +675,7 @@ SIG is in charge of the specification of Bluetooth and creating a roadmap
  To standardise the form of communication through Bluetooth, SIG has defined
  a set of profiles that needs to be made available by the manufacturer.
  Devices usually only have a subset of these profiles enabled.
- Some of these profiles are :
+ Some of these profiles are: 
 \end_layout
 
 \begin_layout Itemize
@@ -525,14 +695,14 @@ HID Human Interface Device Profile.
 \end_layout
 
 \begin_layout Standard
-Bluetooth is aimed at applications that require short range communication
+Bluetooth is aimed at applications that require short-range communication
  typically few meters.
- The actual range a application make depends on the Bluetooth Class the
+ The actual range an application make depends on the Bluetooth Class the
  application has and also external circumstances like absorption, diffraction
  etc.
- Bluetooth deices are separated out into 3 different classes with separate
+ Bluetooth devices are separated out into 3 different classes with separate
  transmission power.
- The full picture is shown in Table _____.
+ The full picture is shown in Table 1.
 \end_layout
 
 \begin_layout Standard
@@ -704,7 +874,7 @@ Optional
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -727,10 +897,11 @@ Bluetooth Power class
 Due to the different profiles and more than sufficient range and relatively
  low power consumption, Bluetooth shows considerable potential to be used
  as our Radio frequency signal for our positioning.
- However there some aspects of it which makes it difficult for bluetooth
+ However they’re some aspects of it, which makes it difficult for Bluetooth
  to be used.
- The main problem is the security constraints of bluetooth which requires
+ The main problem is the security constraints of Bluetooth, which requires
  the devices to go through a pairing process with each other.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -738,11 +909,11 @@ In Bluetooth technology a device could take either the master role or the
  slave role.
  Before the devices can communicate with each other they have to discover
  each other and specify which profile they are going to use.
- Pairing is done by : 
+ Pairing is done by: 
 \end_layout
 
 \begin_layout Enumerate
-Master devices continously broadcast “inquiry messages”
+Master devices continuously broadcast “inquiry messages”
 \end_layout
 
 \begin_layout Enumerate
@@ -782,30 +953,37 @@ Modes
 \end_layout
 
 \begin_layout Standard
-One of the biggest improvement introduced for BLE, that is not there for
- Bluetooth, is the addition of the new mode.
+One of the biggest improvements introduced for BLE that is not there for
+ Bluetooth is the addition of the new mode.
  This new mode takes away the necessity for pairing to exchange data.
  In this “broadcast” mode the device can send data in the advertisement
  channel.
- There are 4 different modes in BLE : 
+ There are 4 different modes in BLE
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ChalmersBLE"
+
+\end_inset
+
+ : 
 \end_layout
 
 \begin_layout Description
-Central : similar to the Bluetooth master role, can have multiple connections.
+Central : Similar to the Bluetooth master role, can have multiple connections.
  
 \end_layout
 
 \begin_layout Description
-Peripheral: a device can only have one active connection with the central
+Peripheral: A device can only have one active connection with the central
  mode 
 \end_layout
 
 \begin_layout Description
-Broadcaster : Where you send data in the advertisement chanel
+Broadcaster : Where you send data in the advertisement channel
 \end_layout
 
 \begin_layout Description
-Observer: Where you listen to the advertisement chanel
+Observer: Where you listen to the advertisement channel
 \end_layout
 
 \begin_layout Paragraph
@@ -817,7 +995,7 @@ Scanning
 \end_layout
 
 \begin_layout Standard
-Another big improvement BLE has brought is the ablity to discover other
+Another big improvement BLE has brought is the ability to discover other
  devices in two different modes.
  BLE enabled devices can now passively and actively scan for connectable
  devices.
@@ -852,14 +1030,13 @@ Range
 \begin_layout Standard
 Similar to the Classic Bluetooth, the range of BLE is determined by the
  transmitting power and the interference that it might experience.
- BLE has a transmitting power up +10dBm which gives it a range of 300m theoretic
-ally.
+ BLE has a transmitting power up +10dBm, which gives it a range of 300m
+ theoretically.
  However BLE usually use a power of 0dB or less which gives it a range of
  about 50m[link 9].
- As you can see from the table ____, even though BLE is meant to have low-energy
- consumption, it has a bigger range than Classic Bluetooth under maximum
- power.
- This mainly due to the smaller packet.
+ Even though BLE is meant to have low-energy consumption, it has a bigger
+ range than Classic Bluetooth under maximum power due to smaller packet
+ size.
  
 \end_layout
 
@@ -872,7 +1049,14 @@ Ecolocation
 \end_layout
 
 \begin_layout Standard
-Ecolocation is a RF based location algorithm.
+Ecolocation is a RF based location algorithm 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KiranYedavalliBhaskarKrishnamachariSharmilaRavula2005"
+
+\end_inset
+
+.
  It uses the sequence of received signal strength RSS from nearby reference
  nodes with known locations, to find the location of the unknown node.
  By ordering the reference nodes by their distance we are able to map different
@@ -886,8 +1070,8 @@ Training
 
 phase During the training phase, we divide the area (the table), where the
  device is going to be, into segments.
- We go through these segments and detect the RSS signal from all the reference
- node and store them to a database.
+ We go through these segments and detect the RSS signal from all of the
+ reference nodes and store them to a database.
  
 \end_layout
 
@@ -909,24 +1093,24 @@ Trilateration
 \end_layout
 
 \begin_layout Standard
-Trilateration is one of the oldest and most recognisable method of estimating
+Trilateration is one of the oldest and most recognisable methods of estimating
  location of an object.
  We use a minimum of three reference nodes and the distance between them
  and the device to work out the position of the device.
- The reference nodes are used as centers of circles and the distance is
+ The reference nodes are used as centres of circles and the distance is
  used as the radius of those circles.
  The point of intersection of those three circles is the relative or the
  actual position of the devices depending on whether the location of the
- reference nodes are known.
+ reference nodes is known.
  In most cases of position systems the reference nodes are beacons or access
  points.
- The distance can be measured using RSS or or time of flight (TOF), time
- taken for the signal to reach the device.
+ The distance can be measured using RSS or time of flight (TOF), time taken
+ for the signal to reach the device.
  These measurements combined with the coordinates of the beacons can form
  the basis of trilateration.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 Signal Based Position
 \end_layout
 
@@ -952,15 +1136,15 @@ Arrival
 
 (AoA)- Angle of Arrival compares the direction from which the different
  signals arrive at the devices.
- Using the received angle, we can determine it direction from whic the signal
- came from.
- If we have multiple signal coming to the device, we can find the exact
+ Using the received angle, we can determine it direction from which the
+ signal came from.
+ If we have multiple signals coming to the device, we can find the exact
  location of the device by looking at where the lines intersect.
- We need a minimum of two reference points and two angls to work out the
+ We need a minimum of two reference points and two angles to work out the
  correct position.
- There are many difficulties with the method, the device would need to know
+ There are many difficulties with the method; the device would need to know
  its own orientation to work out the correct angle.
- The sensors that detects the signal needs to be very advance (more advanced
+ The sensor that detects the signal needs to be very advanced (more advanced
  than the ones usually found on a device.
  
 \end_layout
@@ -996,7 +1180,7 @@ RSSI
 \begin_inset space ~
 \end_inset
 
-Based - Similar to trilateration, the device can use the Recieved Signal
+Based -Similar to trilateration, the device can use the Received Signal
  Strength Indicator (RSSI) to work out distance from the reference nodes.
  Any device with a proper network adapter can work out the RSSI value.
 \end_layout
@@ -1014,12 +1198,19 @@ Filter based positioning uses mathematical methods to estimate the positioning
  of the device, using some given observations from the system.
  The observation can be anything from distance to references, previous estimated
  position or sensor inputs such as a compass or gyroscope.
- This technique has been used for many different application.
+ This technique has been used for many different applications.
  Its very helpful because it allows us to incorporate many other sources
- of data that we could potentially have for the system.
- A good example of this is presented in [15], where they use ultrasound
- as the radio frequency signal and combine it with odometry reading to get
- a better accuracy for their tracking ability.
+ of data that we could potentially has for the system.
+ A good example of this is presented in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rag"
+
+\end_inset
+
+, where they use ultrasound as the radio frequency signal and combine it
+ with odometer reading to get a better accuracy for their tracking ability.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1032,7 +1223,7 @@ A particle filter work by continuously generating thousands of particle
  out those particles that are unlikely to be the correct location.
  We then use the remaining particles to calculate an estimate for the position
  of the device.
- The filtering is done by assigning weights to all the particle depending
+ The filtering is done by assigning weights to the entire particle depending
  on how reasonable the particle values are according to the observed value.
  Gradually, most of the particles will have negligible weight and therefore
  would not affect the estimation while some particles with significant weights
@@ -1042,8 +1233,21 @@ A particle filter work by continuously generating thousands of particle
  During the initial step we uniformly distribute the particles around the
  map, later particles and discarded or saved depending on the filtering
  method.
- Two of the most commonly used filter methods are Kalman Filter and Mote
- Carlo Filter .
+ Two of the most commonly used filter methods are Kalman Filter 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kotanen2003"
+
+\end_inset
+
+ and Mote Carlo Filter
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MonteCarlo"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -1481,32 +1685,28 @@ Evaluation Plan
 
 \begin_layout Standard
 As you can see from the background research, a lot of companies and individuals
- have done various research into creating an interactive table.
+ have done various researches into creating an interactive table.
  A lot of research has also been undertaken in the topic of indoor positioning,
  especially with Bluetooth and BLE.
- Therefore there is a lot of information about bluetooth and Trilateration
+ Therefore there is a lot of information about Bluetooth and Trilateration
  and filtering techniques.
- I will be undertaking a research in the use of bluetooth for positioning
+ I will be undertaking a research in the use of Bluetooth for positioning
  in a smaller area.
  Where I believe the error in sensing would be much smaller.
- Basic sensing of Bluetooth signalling augmented with odometry data and
+ Basic sensing of Bluetooth signalling augmented with odometer data and
  filtering techniques would give me positioning information to a quite a
  good accuracy level.
  
 \end_layout
 
 \begin_layout Standard
-There are are severals ways for me to evaluate the research I have done
- and the accuracy of the techniques I have used.
+There are several ways for me to evaluate the research I have done and the
+ accuracy of the techniques I have used.
  As you can see from the progress plan I aim to gather information about
  distance measurements through Bluetooth and compare it to real world, physical
  distance and calculate the error for it.
- 
-\end_layout
-
-\begin_layout Standard
-Another experiment I would do after that it to work out the error for trilaterat
-ion and dead reckoning and create an app which uses a filtration method
+ Another experiment I would do after that it to work out the error for trilatera
+tion and dead reckoning and create an app, which uses a filtration method
  like the Monte Carlo localization filter to gain a confidence level of
  where the device is.
  I would do this by having a large sheet of paper, which would be divided
@@ -1536,9 +1736,20 @@ Another evaluation experiment I would like to try is a way to benchmark
 \begin_layout Standard
 Finally I would also have an evaluation where I would give some users an
  opportunity to use the app and see how they do.
- Then I would try and do get a questionaire filled to get their feedback.
+ Then I would try and do get a questionnaire filled to get their feedback.
  I would try and get a wider variety of views including from graphic designers,
  students, lecturers etc.
+\end_layout
+
+\begin_layout Author
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "References1"
+options "plain"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
